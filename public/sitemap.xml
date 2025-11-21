@@ -2,17 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hun9k.github.io/vscode/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-11-21T23:46:48+08:00</lastmod>
   </url><url>
-    <loc>https://hun9k.github.io/vscode/snippets/</loc>
+    <loc>//localhost:1313/docs/vscode/</loc>
     <lastmod>2025-11-21T23:46:48+08:00</lastmod>
   </url><url>
-    <loc>https://hun9k.github.io/</loc>
+    <loc>//localhost:1313/docs/vscode/snippets/</loc>
     <lastmod>2025-11-21T23:46:48+08:00</lastmod>
   </url><url>
-    <loc>https://hun9k.github.io/categories/</loc>
+    <loc>//localhost:1313/docs/</loc>
+    <lastmod>2025-11-21T23:46:48+08:00</lastmod>
   </url><url>
-    <loc>https://hun9k.github.io/tags/</loc>
+    <loc>//localhost:1313/blog/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/quick-start/</loc>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
