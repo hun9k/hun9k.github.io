@@ -2,3 +2,7 @@ baseURL = 'https://hun9k.github.io/'
 languageCode = 'zh-cn'
 title = '蓝牛开发'
 theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
