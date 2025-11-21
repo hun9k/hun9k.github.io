@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝牛开发</title>
+    <link>https://hun9k.github.io/</link>
+    <description>Recent content on 蓝牛开发</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 21 Nov 2025 23:46:48 +0800</lastBuildDate>
+    <atom:link href="https://hun9k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode中的快捷代码片段</title>
+      <link>https://hun9k.github.io/vscode/snippets/</link>
+      <pubDate>Fri, 21 Nov 2025 23:46:48 +0800</pubDate>
+      <guid>https://hun9k.github.io/vscode/snippets/</guid>
+      <description>&lt;h2 id=&#34;vscode中的快捷代码片段&#34;&gt;VSCode中的快捷代码片段&lt;/h2&gt;&#xA;&lt;p&gt;代码片段，就是Snippets，给出简短提示，快速生成大量代码。&lt;/p&gt;&#xA;&lt;h3 id=&#34;内置go语言snippets&#34;&gt;内置Go语言Snippets&lt;/h3&gt;&#xA;&lt;h3 id=&#34;自定义snippets&#34;&gt;自定义Snippets&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>
