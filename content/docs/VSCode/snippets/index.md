@@ -5,9 +5,7 @@ title = '代码片段'
 
 +++
 
-## VSCode的代码片段
-
-代码片段，就是Snippets，给出简短提示，快速生成大量代码。
+VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。
 
 ### 内置Go语言Snippets
 

@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>蓝牛开发 – </title>
+    <title>蓝牛开发 – 博客</title>
     <link>//localhost:1313/blog/</link>
-    <description>Recent content on 蓝牛开发</description>
+    <description>Recent content in 博客 on 蓝牛开发</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     
 	  <atom:link href="//localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,19 @@
         
       
     
+    
+    <item>
+      <title>代码生成</title>
+      <link>//localhost:1313/blog/code-generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/blog/code-generator/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
     
   </channel>
 </rss>

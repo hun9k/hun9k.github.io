@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝牛开发 – 教程</title>
+    <link>//localhost:1313/courses/</link>
+    <description>Recent content in 教程 on 蓝牛开发</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	  <atom:link href="//localhost:1313/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
