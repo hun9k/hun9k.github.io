@@ -16,11 +16,13 @@
     <loc>//localhost:1313/docs/</loc>
     <lastmod>2025-11-21T23:46:48+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/docs/quick-start/</loc>
-  </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
+    <loc>//localhost:1313/gapi/</loc>
+  </url><url>
     <loc>//localhost:1313/tags/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/vscode/shortcuts/</loc>
   </url><url>
     <loc>//localhost:1313/courses/</loc>
   </url><url>

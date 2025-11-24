@@ -80,7 +80,7 @@ group.GET(&#34;&#34;, articles.Get)                    // 获取多个资源
 router := gin.Default() group := router.Group(&#34;v1&#34;).Group(&#34;articles&#34;) group.POST(&#34;&#34;, articles.Post) // 创建一个资源 group.DELETE(&#34;:id&#34;, articles.DeleteId) // 删除一个资源 group.PUT(&#34;:id&#34;, articles.PutId) // 更新一个资源 group.GET(&#34;:id&#34;, articles.GetId) // 获取一个资源 group.GET(&#34;&#34;, articles.Get) // 获取多个资源 代码中，只有articles资源名称部分是不同的，因此我们仅需要更改articles部分即可。
 那么就可以创建一个模板文件，使用Go标准库 text/template：
 tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersion}}&#34;).Group(&#34;{{.ResourceName}}&#34;) group.POST(&#34;&#34;, articles.Post) // 创建一个资源 group.DELETE(&#34;:id&#34;, articles.DeleteId) // 删除一个资源 group.PUT(&#34;:id&#34;, articles.PutId) // 更新一个资源 group.GET(&#34;:id&#34;, articles.GetId) // 获取一个资源 group.GET(&#34;&#34;, articles.Get) // 获取多个资源 ` 利用这个模板，替换必要的版本和资源名部分，就可以生成Go代码，后边写入到articles.go文件即可。">
-  <meta itemprop="wordCount" content="219">
+  <meta itemprop="wordCount" content="227">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="生成Go代码">
   <meta name="twitter:description" content="代码生成的主要思路：
@@ -105,8 +105,8 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
 
   <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
     <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
-    <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo-blue.png" alt="Logo" height="20" width="40" />
-    <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo-blue-dark.png" alt="Dark Logo" height="20" width="40" />
+    <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo.svg" alt="Logo" height="20" width="40" />
+    <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo-dark.svg" alt="Dark Logo" height="20" width="40" />
     <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="蓝牛开发">蓝牛开发</span>
 </a>
 <a
@@ -121,6 +121,12 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
   
   class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">教程</span>
+</a><a
+  title=""
+  href="/gapi"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">GAPI</span>
 </a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
   <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
     <input
@@ -235,6 +241,12 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >go/ast与 reflect的差别</a>
             </li>
+          <li>
+              <a
+                href="#%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >格式化代码</a>
+            </li>
           </ul>
   
               
@@ -257,18 +269,25 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
   >代码片段
     </a>
               
-            </li></ul>
-      </div>
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/quick-start/"
+    href="/docs/vscode/shortcuts/"
     
-  >Quick Start
+  >快捷键
     </a>
               
             </li></ul>
+      </div>
+            </li></ul>
       </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/gapi/"
+    
+  >GAPI
+    </a></li>
           <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
@@ -314,15 +333,16 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
   >代码片段
     </a>
               
-            </li></ul>
-      </div></li>
-          <li class=""><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/quick-start/"
+    href="/docs/vscode/shortcuts/"
     
-  >Quick Start
-    </a></li>
+  >快捷键
+    </a>
+              
+            </li></ul>
+      </div></li>
         
       </ul>
     </div>
@@ -389,6 +409,10 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#goast%e4%b8%8e-reflect%e7%9a%84%e5%b7%ae%e5%88%ab">go/ast与 reflect的差别
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81">格式化代码
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -491,16 +515,16 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
   </button>
 </div>
 </div>
-<p>以上模型是我们手动定义的，接下来个根据这个模型定义生成基础的<code>CRUD</code>代码。</p>
+<p>以上模型是我们手动定义的，接下来将根据这个模型定义生成基础的<code>CRUD</code>代码。</p>
 <p>第一步，就需要知道到底有哪些字段。这就属于动态的结构，因为我们不知道，到底有哪些字段。</p>
 <p>那如何才能知道这个模型的结构呢？就需要Go源码分析工具。Go标准库的**<code>go/ast</code>**及相关的包，可以完成Go源码的分析任务，相关的包：</p>
 <ul>
-<li><code>go/parser</code>，包解析器实现了Go源文件的解析器</li>
-<li><code>go/ast</code>，包声明用于表示Go包的语法树的类型</li>
-<li><code>go/token</code>，包义了表示Go语言的词法token，以及对token的基本操作的常量</li>
-<li><code>go/types</code>，包声明数据类型并实现Go包的类型检查算法</li>
-<li><code>go/format</code>，包实现了Go源代码的标准格式</li>
-<li><code>go/doc</code>，包从<code>AST</code>中提取源代码文档</li>
+<li><code>go/parser</code>，解析器实现了Go源文件的解析器</li>
+<li><code>go/ast</code>，声明用于表示Go包的语法树的类型</li>
+<li><code>go/token</code>，包含了表示Go语言的词法token，以及对token的基本操作的常量</li>
+<li><code>go/types</code>，声明数据类型并实现Go包的类型检查算法</li>
+<li><code>go/format</code>，实现了Go源代码的标准格式</li>
+<li><code>go/doc</code>，从<code>AST</code>中提取源代码文档</li>
 </ul>
 <p>当然还有其他包，可以从https://pkg.go.dev/go 中查看。</p>
 <p>快速演示，获取模型定义中，有哪些字段：</p>
@@ -554,6 +578,13 @@ tmplRouter = `router := gin.Default() group := router.Group(&#34;{{.RouterVersio
 <li><code>reflect</code>反射，基于Go程序（内存结构）获取信息</li>
 </ul>
 <p>因此，代码生成通常基于Go源码来生成，使用<code>go/ast</code>相关包多些。</p>
+<h2>格式化代码<span class="hx:absolute hx:-mt-20" id="格式化代码"></span>
+    <a href="#%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>方案：</p>
+<ul>
+<li><code>go/format</code>包，将代码格式化完毕后，写入<code>.go</code>文件</li>
+<li><code>go fmt</code>工具，代码写入<code>.go</code>文件后，执行<code>go fmt</code>命令进行格式化</li>
+</ul>
+<p>选择那种都行，推荐第一种，这样可以仅进行一次文件操作。否则，写入和<code>go fmt</code>需要两次文件操作。</p>
 
         </div>
         <div class="hx:mt-16"></div>

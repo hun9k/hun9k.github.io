@@ -1,0 +1,17 @@
+<svg width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <style>
+            @font-face {
+                font-family: '方正小篆体';
+                src: url('方正小篆体.ttf') format('truetype');
+            }
+        </style>
+    </defs>
+
+    <rect x="10" y="10" rx="40" ry="40" width="160" height="160" troke-width="4" stroke="#107eba" fill-opacity="0" />
+
+    <text x="90" y="130" font-family="方正小篆体" font-size="120" text-anchor="middle" stroke="#107eba" fill="#107eba">
+        牛
+    </text>
+</svg>

@@ -10,25 +10,28 @@ menu:
     - name: 教程
       pageRef: /courses
       weight: 2
-    - name: 搜索
+    - name: GAPI
+      pageRef: /gapi
       weight: 3
+    - name: 搜索
+      weight: 4
       params:
         type: search
     - name: GitHub
-      weight: 4
+      weight: 5
       url: "https://github.com/hun9k/hun9k.github.io"
       params:
         icon: github
     - name: 关于
       pageRef: /about
-      weight: 5
+      # weight: 
 params:
   navbar:
     displayTitle: true
     displayLogo: true
     logo:
-      path: images/logo-blue.png
-      dark: images/logo-blue-dark.png
+      path: images/logo.svg
+      dark: images/logo-dark.svg
       link: /
       width: 40
       height: 20

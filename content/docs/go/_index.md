@@ -1,8 +1,5 @@
-+++
-
-title = 'Go语言'
-
-weight = 2
-
-+++
+---
+title: Go语言
+weight: 2
+---
 

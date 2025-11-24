@@ -9,18 +9,46 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>代码片段 – 蓝牛开发</title>
-  <meta name="description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。
-内置Go语言Snippets 自定义Snippets " /><link rel="canonical" href="//localhost:1313/docs/vscode/snippets/" itemprop="url" />
+  <meta name="description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。例如，最典型的错误判定代码：
+if err != nil { return err } if err == nil { // your code } 编写Go代码时，几乎每个函数中都要出现好几次。代码片段的目的就是让这种常用代码快速实现。键入iferr后&lt;Tab&gt;：
+// iferr&lt;Tab&gt; if err != nil { return nil, err } 内置Go语言Snippets 稍微注意下，是VSCode的Go扩展（Go for Visual Studio Code）内置的，不是VSCode内置的：" /><link rel="canonical" href="//localhost:1313/docs/vscode/snippets/" itemprop="url" />
 
 <meta property="og:title" content="代码片段">
 <meta
   property="og:description"
   content="
     
-      VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。
-内置Go语言Snippets
-    自定义Snippets
+      VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。例如，最典型的错误判定代码：
+
+
+if err != nil {
+    return err
+}
+
+if err == nil {
+    // your code
+}
+  
     
+
+  
+
+
+编写Go代码时，几乎每个函数中都要出现好几次。代码片段的目的就是让这种常用代码快速实现。键入iferr后&lt;Tab&gt;：
+
+
+// iferr&lt;Tab&gt;
+if err != nil {
+	return nil, err
+}
+  
+    
+
+  
+
+
+内置Go语言Snippets
+    稍微注意下，是VSCode的Go扩展（Go for Visual Studio Code）内置的，不是VSCode内置的：
     
   ">
 <meta
@@ -42,15 +70,17 @@
 
 
   <meta itemprop="name" content="代码片段">
-  <meta itemprop="description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。
-内置Go语言Snippets 自定义Snippets">
+  <meta itemprop="description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。例如，最典型的错误判定代码：
+if err != nil { return err } if err == nil { // your code } 编写Go代码时，几乎每个函数中都要出现好几次。代码片段的目的就是让这种常用代码快速实现。键入iferr后&lt;Tab&gt;：
+// iferr&lt;Tab&gt; if err != nil { return nil, err } 内置Go语言Snippets 稍微注意下，是VSCode的Go扩展（Go for Visual Studio Code）内置的，不是VSCode内置的：">
   <meta itemprop="datePublished" content="2025-11-21T23:46:48+08:00">
   <meta itemprop="dateModified" content="2025-11-21T23:46:48+08:00">
-  <meta itemprop="wordCount" content="3">
+  <meta itemprop="wordCount" content="833">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="代码片段">
-  <meta name="twitter:description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。
-内置Go语言Snippets 自定义Snippets">
+  <meta name="twitter:description" content="VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。例如，最典型的错误判定代码：
+if err != nil { return err } if err == nil { // your code } 编写Go代码时，几乎每个函数中都要出现好几次。代码片段的目的就是让这种常用代码快速实现。键入iferr后&lt;Tab&gt;：
+// iferr&lt;Tab&gt; if err != nil { return nil, err } 内置Go语言Snippets 稍微注意下，是VSCode的Go扩展（Go for Visual Studio Code）内置的，不是VSCode内置的：">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -68,8 +98,8 @@
 
   <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
     <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
-    <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo-blue.png" alt="Logo" height="20" width="40" />
-    <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo-blue-dark.png" alt="Dark Logo" height="20" width="40" />
+    <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo.svg" alt="Logo" height="20" width="40" />
+    <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo-dark.svg" alt="Dark Logo" height="20" width="40" />
     <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="蓝牛开发">蓝牛开发</span>
 </a>
 <a
@@ -84,6 +114,12 @@
   
   class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
 ><span class="hx:text-center">教程</span>
+</a><a
+  title=""
+  href="/gapi"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">GAPI</span>
 </a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
   <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
     <input
@@ -208,18 +244,25 @@
           </ul>
   
               
-            </li></ul>
-      </div>
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/quick-start/"
+    href="/docs/vscode/shortcuts/"
     
-  >Quick Start
+  >快捷键
     </a>
               
             </li></ul>
+      </div>
+            </li></ul>
       </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/gapi/"
+    
+  >GAPI
+    </a></li>
           <li class=""><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
@@ -265,15 +308,16 @@
   >代码片段
     </a>
               
-            </li></ul>
-      </div></li>
-          <li class=""><a
+            </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
-    href="/docs/quick-start/"
+    href="/docs/vscode/shortcuts/"
     
-  >Quick Start
-    </a></li>
+  >快捷键
+    </a>
+              
+            </li></ul>
+      </div></li>
         
       </ul>
     </div>
@@ -363,13 +407,325 @@
 
         <div class="content">
           <h1>代码片段</h1>
-          <p>VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。</p>
+          <p>VSCode的代码片段（Snippets），是指预设好代码，通过简短提示，快速生成大量代码的功能。例如，最典型的错误判定代码：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// your code</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>编写Go代码时，几乎每个函数中都要出现好几次。代码片段的目的就是让这种常用代码快速实现。键入<code>iferr</code>后<code>&lt;Tab&gt;</code>：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// iferr&lt;Tab&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
 <h3>内置Go语言Snippets<span class="hx:absolute hx:-mt-20" id="内置go语言snippets"></span>
-    <a href="#%e5%86%85%e7%bd%aego%e8%af%ad%e8%a8%80snippets" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h3>自定义Snippets<span class="hx:absolute hx:-mt-20" id="自定义snippets"></span>
-    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89snippets" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+    <a href="#%e5%86%85%e7%bd%aego%e8%af%ad%e8%a8%80snippets" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>稍微注意下，是VSCode的<strong>Go扩展</strong>（Go for Visual Studio Code）内置的，不是VSCode内置的：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div class="hextra-code-filename not-prose" dir="auto">$HOME\.vscode\extensions\golang.go-&lt;version&gt;\snippets\go.json</div><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;.source.go&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;single import&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;im&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;import \&#34;${1:package}\&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;multiple imports&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ims&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;import (\n\t\&#34;${1:package}\&#34;\n)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;single constant&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;co&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;const ${1:name} = ${2:value}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;multiple constants&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;cos&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;const (\n\t${1:name} = ${2:value}\n)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type function declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tyf&#34;</span>,<span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;type ${1:name} func($3) $4&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type interface declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tyi&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;type ${1:name} interface {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;type struct declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tys&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;type ${1:name} struct {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;package main and main function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;pkgm&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;package main\n\nfunc main() {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;function declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;func&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func $1($2) $3 {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;single variable&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;var&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;var ${1:name} ${2:type}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;multiple variables&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;vars&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;var (\n\t${1:name} ${2:type}\n)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;switch statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;switch&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;switch ${1:expression} {\ncase ${2:condition}:\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;select statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;sel&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;select {\ncase ${1:condition}:\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;case clause&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;cs&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;case ${1:condition}:$0&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;for statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;for&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;for ${1:i} := ${2:0}; $1 &lt; ${3:count}; $1${4:++} {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;for range statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;forr&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;for ${1:_}, ${2:v} := range ${3:v} {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;channel declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ch&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;chan ${1:type}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;map declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;map&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;map[${1:type}]${2:type}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;empty interface&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;in&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;interface{}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;if statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;if&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;if ${1:condition} {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;else branch&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;el&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;else {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;if else statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ie&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;if ${1:condition} {\n\t$2\n} else {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;if err != nil&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;iferr&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;if err != nil {\n\t${1:return ${2:nil, }${3:err}}\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;fmt.Println&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;fp&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;fmt.Println(\&#34;$1\&#34;)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;fmt.Printf&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ff&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;fmt.Printf(\&#34;$1\&#34;, ${2:var})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;log.Println&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;lp&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;log.Println(\&#34;$1\&#34;)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;log.Printf&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;lf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;log.Printf(\&#34;$1\&#34;, ${2:var})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;log variable content&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;lv&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;log.Printf(\&#34;${1:var}: %#+v\\\\n\&#34;, ${1:var})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;t.Log&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tl&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;t.Log(\&#34;$1\&#34;)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;t.Logf&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tlf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;t.Logf(\&#34;$1\&#34;, ${2:var})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;t.Logf variable content&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tlv&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;t.Logf(\&#34;${1:var}: %#+v\\\\n\&#34;, ${1:var})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;make(...)&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;make&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;make(${1:type}, ${2:0})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;new(...)&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;new&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;new(${1:type})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;panic(...)&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;pn&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;panic(\&#34;$0\&#34;)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Snippet for panic&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http ResponseWriter *Request&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;wr&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;${1:w} http.ResponseWriter, ${2:r} *http.Request&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http.HandleFunc&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;hf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;${1:http}.HandleFunc(\&#34;${2:/}\&#34;, ${3:handler})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http handler declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;hand&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func $1(${2:w} http.ResponseWriter, ${3:r} *http.Request) {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http.Redirect&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;rd&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;http.Redirect(${1:w}, ${2:r}, \&#34;${3:/}\&#34;, ${4:http.StatusFound})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http.Error&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;herr&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;http.Error(${1:w}, ${2:err}.Error(), ${3:http.StatusInternalServerError})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http.ListenAndServe&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;las&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;http.ListenAndServe(\&#34;${1::8080}\&#34;, ${2:nil})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;http.Serve&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;sv&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;http.Serve(\&#34;${1::8080}\&#34;, ${2:nil})&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;goroutine anonymous function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;go&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;go func($1) {\n\t$0\n}($2)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;goroutine function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;gf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;go ${1:func}($0)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;defer statement&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;df&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;defer ${1:func}($0)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func Test$1(t *testing.T) {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;test main&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tm&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func TestMain(m *testing.M) {\n\t$1\n\n\tos.Exit(m.Run())\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;benchmark function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;bf&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func Benchmark$1(b *testing.B) {\n\tfor ${2:i} := 0; ${2:i} &lt; b.N; ${2:i}++ {\n\t\t$0\n\t}\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;example function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ef&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func Example$1() {\n\t$2\n\t//Output:\n\t$3\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;table driven test&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;tdt&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func Test$1(t *testing.T) {\n\ttestCases := []struct {\n\t\tdesc\tstring\n\t\t$2\n\t}{\n\t\t{\n\t\t\tdesc: \&#34;$3\&#34;,\n\t\t\t$4\n\t\t},\n\t}\n\tfor _, tC := range testCases {\n\t\tt.Run(tC.desc, func(t *testing.T) {\n\t\t\t$0\n\t\t})\n\t}\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;init function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;finit&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func init() {\n\t$1\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;main function&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;fmain&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func main() {\n\t$1\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;method declaration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;meth&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;func (${1:receiver} ${2:type}) ${3:method}($4) $5 {\n\t$0\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hello world web app&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;helloweb&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;package main\n\nimport (\n\t\&#34;fmt\&#34;\n\t\&#34;net/http\&#34;\n\t\&#34;time\&#34;\n)\n\nfunc greet(w http.ResponseWriter, r *http.Request) {\n\tfmt.Fprintf(w, \&#34;Hello World! %s\&#34;, time.Now())\n}\n\nfunc main() {\n\thttp.HandleFunc(\&#34;/\&#34;, greet)\n\thttp.ListenAndServe(\&#34;:8080\&#34;, nil)\n}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;sort implementation&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;sort&#34;</span>, <span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;type ${1:SortBy} []${2:Type}\n\nfunc (a $1) Len() int           { return len(a) }\nfunc (a $1) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }\nfunc (a $1) Less(i, j int) bool { ${3:return a[i] &lt; a[j]} }&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>配置中：</p>
+<ul>
+<li>prefix，输入的前缀</li>
+<li>body，生成的代码片段</li>
+<li>Description，描述，为了空间，我删了。</li>
+</ul>
+<h3>自定义Snippets<span class="hx:absolute hx:-mt-20" id="自定义snippets"></span>
+    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89snippets" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>除了扩展预定义的，也可以自定义，VSCode菜单：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">File</span> &gt; <span style="color:#a6e22e">Preferences</span> &gt; <span style="color:#a6e22e">Configure</span> <span style="color:#a6e22e">Snippets</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 文件 &gt; 首选项 &gt; 配置代码片段</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>可以为当前项目和Go全局创建自定义的Snippets配置文件：</p>
+<p><img src="image-20251124134020446.png" alt="image-20251124134020446"  loading="lazy" /></p>
+<p>选择后，自动生成配置文件：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div class="hextra-code-filename not-prose" dir="auto">go.json</div><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Place your snippets for go here. Each snippet is defined under a snippet name and has a prefix, body and 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// same ids are connected.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Example:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// &#34;Print to console&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 	&#34;prefix&#34;: &#34;log&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 	&#34;body&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 		&#34;console.log(&#39;$1&#39;);&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 		&#34;$2&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 	],
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 	&#34;description&#34;: &#34;Log output to console&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>依据示例，添加即可。其中：</p>
+<ul>
+<li>$1, $2用于制表符位置，$0表示光标的最终位置</li>
+<li>${1:label}, ${2:another}表示占位符</li>
+</ul>
+<p>示例：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;if err == nil&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;prefix&#34;</span>: <span style="color:#e6db74">&#34;ifne&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;body&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;if err == nil {&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;\t// your code here&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;\t${1:return ${2:nil}}&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;}&#34;</span>
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Snippet for if err != nil&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>使用：</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// ifne&lt;tab&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// your code here</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+
         </div>
         <div class="hx:mt-16"></div>
-        
+        <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/vscode/shortcuts/"
+        title="快捷键"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >快捷键<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>
